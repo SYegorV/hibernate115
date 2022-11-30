@@ -1,9 +1,11 @@
 package org.example.model;
 
+import lombok.Builder;
+
 import javax.persistence.*;
 
 @Table
-@Entity(name = "users")
+@Entity(name = "table_u")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

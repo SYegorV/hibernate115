@@ -2,9 +2,13 @@ package org.example;
 
 import org.example.service.UserService;
 import org.example.service.UserServiceImpl;
+import java.sql.SQLException;
 
 public class Main {
-    public static void main(String[] args) {
+
+    private final static UserService userService = new UserServiceImpl();
+
+    public static void main(String[] args) throws  SQLException {
         UserService userService = new UserServiceImpl();
 
         userService.createUsersTable();
